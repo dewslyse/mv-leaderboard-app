@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+  margin: 30px;
+}
+
+.caption {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.scores-section {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.score-caption {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.scores-list {
+  border: 2px solid black;
+}
+
+.score-box {
+  padding: 0 10px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.score-box:nth-of-type(even) {
+  background-color: #e0e0e2;
+}
+
+.line {
+  height: 2px;
+  border: 0 dashed;
+  background-color: #e0e0e2;
+  margin-bottom: 30px;
+}
+
+.form {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.form-caption {
+  margin-bottom: 30px;
+}
+
+input {
+  margin: 0 0 15px;
+  padding: 8px;
+}
+
+.btn {
+  width: fit-content;
+  padding: 3px 8px;
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 992px;
+    margin: 100px auto;
+    padding: 0 50px;
+  }
+
+  .caption {
+    text-align: left;
+  }
+
+  .scores-section {
+    flex-direction: row;
+    margin: 0 auto 0 50px;
+    justify-content: space-between;
+  }
+
+  .score-container {
+    width: 45%;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .form {
+    width: 45%;
+  }
+
+  .form-caption {
+    margin-bottom: 20px;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: end;
+  }
+
+  .add-btn {
+    justify-self: flex-end;
+  }
+}
