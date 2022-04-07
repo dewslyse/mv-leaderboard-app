@@ -1,12 +1,22 @@
 import './style.scss';
-import sampleScores from './modules/sample.js';
+import * as APIs from './modules/api.js';
 
-const scoresList = document.querySelector('.scores-list');
+const refreshBtn = document.querySelector('.refresh-btn');
+const addBtn = document.querySelector('.add-btn');
+const form = document.querySelector('.form');
 
-const score = (item) => `
-    <div class="score-box">
-        <p class="score">${item.name}: <span class="number">${item.score}</span></p>
-    </div>
-`;
+document.addEventListener('DOMContentLoaded', APIs.displayScores);
 
-scoresList.innerHTML = `${sampleScores.map(score).join('')}`;
+addBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const userName = document.getElementById('add-name').value;
+  const userScore = document.getElementById('add-score').value;
+
+  APIs.addScore(userName, userScore);
+  form.reset();
+});
+
+refreshBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  APIs.displayScores();
+});
