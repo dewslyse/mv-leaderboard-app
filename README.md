@@ -47,8 +47,8 @@ To get a local copy up and running follow this simple step:
 - To submit a score, send a POST action to `Base URL` + `/games/` + `:id` + `/scores/`. E.g: `Base URL/games.Zl4d7IVkemOTTVg2fUdz/scores/`. Parameters example for POST action:
 ```
 { 
-	"user": "John Doe",
-	"score": 42
+    "user": "John Doe",
+    "score": 42
 }
 ```
 
