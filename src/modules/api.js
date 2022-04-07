@@ -1,5 +1,5 @@
 const baseURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games';
-const id = '6H5Lm7fIzkXRR1Mm0Eoi';
+const id = 'wiA4aOSO2J5kDF8jHBi1';
 
 //Get  game id
 const newGame = async () => {
