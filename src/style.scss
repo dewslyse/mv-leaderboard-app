@@ -6,6 +6,8 @@
 
 body {
   font-family: 'Ubuntu', sans-serif;
+  background-color: #F6FFF8;
+  color: #212529;
 }
 
 .container {
@@ -15,7 +17,7 @@ body {
 .caption {
   font-size: 3rem;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 
 .scores-section {
@@ -30,7 +32,8 @@ body {
 }
 
 .scores-list {
-  border: 2px solid black;
+  border: 2px solid #6B9080;
+  border-radius: 10px;
 }
 
 .score-box {
@@ -40,6 +43,21 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
+  border: solid #DBE5E6 1px;
+  margin: 10px;
+  border-radius: 8px;
+
+  &:nth-of-type(1) {
+    border-color: #F1B604;
+  }
+
+  &:nth-of-type(2) {
+    border-color: #8EA6B4;
+  }
+
+  &:nth-of-type(3) {
+    border-color: #9c9c9c;
+  }
 
   &:nth-of-type(even) {
     background-color: #e0e0e2;
@@ -73,6 +91,11 @@ body {
   }
 }
 
+.number {
+  font-weight: 700;
+  margin-left: 20px;
+}
+
 .line {
   height: 2px;
   border: 0 dashed;
@@ -93,18 +116,37 @@ body {
 
 input {
   margin: 0 0 15px;
-  padding: 8px;
+  padding: 12px 8px;
+  border: 2px solid #6B9080;
+  border-radius: 8px;
+  font-size: 1rem;
+
+  &::placeholder {
+    font-style: italic;
+  }
 }
 
 .btn {
   width: fit-content;
-  padding: 3px 8px;
+  padding: 8px 15px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: #6B9080;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: #344e41;
+  }
 }
 
 @media (min-width: 992px) {
   .container {
     max-width: 992px;
-    margin: 100px auto;
+    margin: 80px auto;
     padding: 0 50px;
   }
 
