@@ -7,14 +7,14 @@ const form = document.querySelector('.form');
 
 document.addEventListener('DOMContentLoaded', APIs.displayScores);
 
-// addBtn.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     let userName = document.getElementById('add-name').value;
-//     let userScore = document.getElementById('add-score').value;
+addBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    let userName = document.getElementById('add-name').value;
+    let userScore = document.getElementById('add-score').value;
 
-//     APIs.addScore(userName, userScore);
-//     form.reset();
-// });
+    APIs.addScore(userName, userScore);
+    form.reset();
+});
 
 // refreshBtn.addEventListener('click', (e) => {
 //     e.preventDefault();

@@ -13,13 +13,13 @@ const newGame = async () => {
 };
 
 //Create user score
-const addScore = async (input) => {
+const addScore = async (user, score) => {
     const response = await fetch(`${baseURL}/${id}/scores/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            user: input.user,
-            score: input.score
+            user,
+            score: Number(score)
         }),
     });
     const res = await response.json();
@@ -33,4 +33,21 @@ const retrieveScores = async () => {
     return allScores;
 };
 
-export { newGame, addScore, retrieveScores };
+const displayScores = async (userData) => {
+    const scoresList = document.querySelector('.scores-list');
+
+    userData = await retrieveScores();
+
+    scoresList.innerHTML = '';
+
+    userData.result.forEach((item) => {
+        const score = `
+            <div class="score-box">
+                <p class="score">${item.user}: <span class="number">${item.score}</span></p>
+            </div>
+        `;
+        scoresList.innerHTML += score;
+    });
+}
+
+export { addScore, retrieveScores, displayScores };
