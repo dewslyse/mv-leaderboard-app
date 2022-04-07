@@ -2,7 +2,7 @@
 
 # Leaderboard
 
-> This website displays scores submitted by different players. It also alow you to submit a score.
+> This website displays scores submitted by different players. It also allows you to submit a score. Scores submission and display is based on the [Leaderboard API service](https://www.notion.so/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3).
 
 ## Screenshot
 
@@ -15,9 +15,9 @@
 - JavaScript(ES6)
 - Webpack
 
-<!-- ## Live site 🚀
+## Live site 🚀
 
-🔗 [Live Site Link](https://dewslyse.github.io/mv-to-do-list/) -->
+🔗 [Live Site Link](https://dewslyse.github.io/mv-leaderboard-app/)
 
 ## Getting Started
 
@@ -28,6 +28,29 @@ To get a local copy up and running follow this simple step:
 - Run `npm install` to install dependencies
 - Run `npm start` to start app
 
+## API information
+
+- The [Leaderboard API](https://www.notion.so/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3) service was created by [Microvere](https://www.microverse.org/).
+- **Base URL**: `https://us-central1-js-capstone-backend.cloudfunctions.net/api/`
+- To create a game, send a POST action to `Base URL` + `/games`, with the name of the game. Parameters example for POST action: 
+```
+{
+    "name": "Game of Thrones"
+}
+```
+- Return value: unique identifier for the game
+```
+{
+    "result": "Game with ID: Zl4d7IVkemOTTVg2fUdz added."
+}
+```
+- To submit a score, send a POST action to `Base URL` + `/games/` + `:id` + `/scores/`. E.g: `Base URL/games.Zl4d7IVkemOTTVg2fUdz/scores/`. Parameters example for POST action:
+```
+{ 
+	"user": "John Doe",
+	"score": 42
+}
+```
 
 ## Author
 
