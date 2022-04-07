@@ -16,7 +16,7 @@ addBtn.addEventListener('click', (e) => {
     form.reset();
 });
 
-// refreshBtn.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     APIs.displayScores();
-// });
+refreshBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    APIs.displayScores();
+});
