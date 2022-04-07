@@ -37,10 +37,11 @@ const displayScores = async (userData) => {
     const scoresList = document.querySelector('.scores-list');
 
     userData = await retrieveScores();
+    const sortedData = userData.result.sort((a, b) => b.score - a.score);
 
     scoresList.innerHTML = '';
 
-    userData.result.forEach((item) => {
+    sortedData.forEach((item) => {
         const score = `
             <div class="score-box">
                 <p class="score">${item.user}: <span class="number">${item.score}</span></p>
