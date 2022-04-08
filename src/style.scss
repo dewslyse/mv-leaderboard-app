@@ -107,7 +107,7 @@ body {
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
 }
 
 .form-caption {
@@ -140,6 +140,12 @@ input {
   &:hover {
     transform: scale(1.1);
     background-color: #344e41;
+  }
+}
+
+@media (min-width: 540px) {
+  .form {
+    width: 65%;
   }
 }
 
