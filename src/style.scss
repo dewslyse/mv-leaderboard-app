@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #f6fff8;
+  color: #212529;
+}
+
+.container {
+  margin: 30px;
+}
+
+.caption {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.scores-section {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.score-caption {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.scores-list {
+  border: 2px solid #6b9080;
+  border-radius: 10px;
+}
+
+.score-box {
+  padding: 0 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border: solid #dbe5e6 1px;
+  margin: 10px;
+  border-radius: 8px;
+
+  &:nth-of-type(1) {
+    border-color: #f1b604;
+  }
+
+  &:nth-of-type(2) {
+    border-color: #8ea6b4;
+  }
+
+  &:nth-of-type(3) {
+    border-color: #9c9c9c;
+  }
+
+  &:nth-of-type(even) {
+    background-color: #e0e0e2;
+  }
+
+  &:nth-of-type(1)::after,
+  &:nth-of-type(2)::after,
+  &:nth-of-type(3)::after {
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    top: -16px;
+    right: -15px;
+    padding: 20px 20px 40px 50px;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+  }
+
+  &:nth-of-type(1)::after {
+    background-color: #f1b604;
+    content: "1st";
+  }
+
+  &:nth-of-type(2)::after {
+    background-color: #8ea6b4;
+    content: "2nd";
+  }
+
+  &:nth-of-type(3)::after {
+    background-color: #9c897c;
+    content: "3rd";
+  }
+}
+
+.number {
+  font-weight: 700;
+  margin-left: 20px;
+}
+
+.line {
+  height: 2px;
+  border: 0 dashed;
+  background-color: #e0e0e2;
+  margin-bottom: 30px;
+}
+
+.form {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-caption {
+  margin-bottom: 30px;
+}
+
+input {
+  margin: 0 0 15px;
+  padding: 12px 8px;
+  border: 2px solid #6b9080;
+  border-radius: 8px;
+  font-size: 1rem;
+
+  &::placeholder {
+    font-style: italic;
+  }
+}
+
+.btn {
+  width: fit-content;
+  padding: 8px 15px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: #6b9080;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: #344e41;
+  }
+}
+
+@media (min-width: 540px) {
+  .form {
+    width: 65%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 992px;
+    margin: 80px auto;
+    padding: 0 50px;
+  }
+
+  .caption {
+    text-align: left;
+
+    &::before {
+      position: absolute;
+      content: url(./assets/images/trophy.png);
+      transform: scale(0.1);
+      height: 0;
+      right: 35%;
+    }
+  }
+
+  .scores-section {
+    flex-direction: row;
+    margin: 0 auto 0 50px;
+    justify-content: space-between;
+  }
+
+  .score-container {
+    width: 45%;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .form {
+    width: 45%;
+  }
+
+  .form-caption {
+    margin-bottom: 20px;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: end;
+  }
+
+  .add-btn {
+    justify-self: flex-end;
+  }
+}
