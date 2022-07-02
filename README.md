@@ -32,7 +32,7 @@ To get a local copy up and running follow this simple step:
 
 - The [Leaderboard API](https://www.notion.so/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3) service was created by [Microvere](https://www.microverse.org/).
 - **Base URL**: `https://us-central1-js-capstone-backend.cloudfunctions.net/api/`
-- To create a game, send a POST action to `Base URL` + `/games`, with the name of the game. Parameters example for POST action: 
+- To create a game, send a POST action to `Base URL` + `games`, with the name of the game. Parameters example for POST action: 
 ```
 {
     "name": "Game of Thrones"
